@@ -1,21 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react'
 
-
-export default function Card(props) {
-    const [music,setMusic]=useState(0);
-    let audio_play;
-    const playy=()=>
-    {
-        
-        props.setPath(props.addmusic);
-        
-        
-        
-        
+export default function Card({name,path, setMySound}) {
+    const handleClick=()=>{
+        setMySound(path);
     }
   return (
-    <button onClick={playy}>
-        play
-    </button>
+    <div className='w-[20rem] bg-[red] '>
+        <h1 className='w-full text-center font-bold text-[3rem]'>{name}</h1>
+        <button className='text-white w-full px-[2rem] py-[0.5rem]' onClick={handleClick}>Play</button>
+    </div>
   )
 }
