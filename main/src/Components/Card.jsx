@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 
 
 export default function Card(props) {
-    const [music,setMusic]=useState(props.addmusic);
+    const [music,setMusic]=useState(0);
+    let audio_play;
     const playy=()=>
     {
-        setMusic(props.addmusic);
-        let audio_play=new Audio(music);
-        audio_play.play();
+        
+        props.setPath(props.addmusic);
+        
+        
+        
+        
     }
   return (
     <button onClick={playy}>
