@@ -49,7 +49,7 @@ const App = () => {
     }
   }, [audioRef, mySound]);
   return (
-    <div className='min-h-screen flex gap-[2rem] items-center justify-center flex-wrap'>
+    <div className='min-h-screen flex gap-[2rem] items-center justify-center flex-wrap p-[1rem] m-[1rem]'>
       {songs.map((song)=>
       { return(
         <Card path={song.title} name="Kalank"  setMySound={setMySound}  key={song.title} img={song.img_src}/>);
